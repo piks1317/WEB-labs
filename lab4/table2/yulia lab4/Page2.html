@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+    background-color: beige;
+}    
+A {
+    color:white; /* Цвет ссылок */
+   }
+   A:visited {
+    color: #cecece; /* Цвет посещенных ссылок */
+   }
+   A:active {
+    color: white; 
+}    
+.nav, .nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: purple;
+    width: 100%;
+    font-size: 140%;
+    color: white;
+}
+
+.nav {
+    position: relative;
+    z-index: 597;
+    float: left;
+}
+.nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 598;
+    min-width: 150px;
+}
+.nav .open ul {
+    display: block;
+}
+.nav li {
+    position: relative;
+    cursor: pointer;
+    padding: 4px 10px;
+   
+}
+.nav > li {
+    float: left;
+}
+.nav ul li {
+    float: none;
+}
+div{
+    background-color: purple;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <script src="script.js"></script>
+</head>
+
+<body onload="func()">
+    
+
+    <ul class="nav" id="menu">
+        <li><a href="Item1.html">Item1</a></li>
+        <li>Item2</li>
+    </ul><b>Hello!!!</b>
+	</body>
+	</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>arrays</title>
+</head>
+
+<body style="text-align: center; background-color: lavender; font-size: 150%">
+    <script>
+        let text = "hi everyone! that's the task №8 :D";
+        document.write(text);
+    </script>
+    <br><br>
+    <p><b>number of elements for the first array : </b><input type="number" id="firstN" min="1"
+            style="font-size: 80%; text-align: center; width: 10%"></p>
+    <p><b>number of elements for the second array : </b><input type="number" id="secondN" min="1"
+            style="font-size: 80%; text-align: center; width: 10%"></p>
+    <input type="button" id="run" value="Run" style="font-size: 80%; text-align: center"><br><br>
+    <div id="firstArray"></div>
+    <br>
+    <div id="secondArray"></div>
+    <br>
+    <div id="sortedFirst"></div>
+    <br>
+    <div id="sortedSecond"></div>
+    <br>
+    <div id="min"></div>
+
+
+    <script>
+        function task8() {
+            let n1 = document.getElementById('firstN').value;
+            let n2 = document.getElementById('secondN').value;
+            let array1 = [];
+            let array2 = [];
+
+            for (let i = 0; i < n1; i++) {
+                array1[i] = Math.round((Math.random() * 10))
+            }
+
+            for (let i = 0; i < n2; i++) {
+                array2[i] = Math.round((Math.random() * 10))
+            }
+
+            function bubbleSort(array) {
+                let len = array.length;
+                for (let i = 0; i < len; i++) {
+                    for (let j = 0; j < len - i - 1; j++) {
+                        if (array[j] > array[j + 1]) {
+                            // swap
+                            let temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
+                return array;
+            }
+
+            let sorted1 = bubbleSort(array1);
+            let sorted2 = bubbleSort(array2);
+
+            let min = 0;
+            for (let i = 0; i < sorted1.length; i++) {
+                if (sorted2.includes(sorted1[i])) {
+                    min = sorted1[i];
+                    break;
+                } else {
+                    min = 'do not contains the same numbers'
+                }
+            }
+
+
+            document.getElementById('firstArray').innerHTML = "\nfirst array : " + array1;
+            document.getElementById('secondArray').innerHTML = "second array : " + array2;
+            document.getElementById('sortedFirst').innerHTML = "sorted first array : " + sorted1;
+            document.getElementById('sortedSecond').innerHTML = "sorted second array : " + sorted2;
+            document.getElementById('min').innerHTML = "the smallest identical element in two arrays : " + min;
+
+        }
+
+        document.getElementById('run').addEventListener('click', task8);
+
+    </script>
+</body>
+
+</html>

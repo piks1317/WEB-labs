@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Report</title>
+
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body style="background-color: #ccfcfc;">
+
+    <div style="margin-top: 30px;" class="container">
+        <div align="center" style="font-size: 18px; margin-bottom: 30px;">
+            <p><strong>Звіти з лабораторних робіт</strong></p>
+            <p><strong>З дисципліни "Розроблення WEB-застосувань"</strong></p>
+            <p><strong>Бригада № 6 &nbsp; Студенти групи ІА-01: <small>&nbsp;Перевознюк Юлія, &nbsp;Підвишенний
+                        Володимир,&nbsp; Хомра Катерина
+                        ,&nbsp; Шевчук Тимур</small></strong></p>
+        </div>
+
+        <div class="row gx-3">
+            <div class="col-sm">
+                <button class="p-2 border btn btn-info" onclick="openLab('div1')">Лабораторна 1</button>
+            </div>
+            <div class="col-sm">
+                <button class="p-2 border btn btn-info" onclick="openLab('div2')">Лабораторна 2</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div3')">Лабораторна 3</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div4')">Лабораторна 4</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div5')">Лабораторна 5</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div6')">Лабораторна 6</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div7')">Лабораторна 7</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div8')">Лабораторна 8</button>
+            </div>
+            <div class="col">
+                <button class="p-2 border btn btn-info" onclick="openLab('div9')">Лабораторна 9</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="display: none; margin-top: 70px;" class="container labContent" id="div1">
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary labItemLinks" onclick="openLabItem('describeDiv')">Опис пердметного
+                    середовища</button>
+                <button style="margin-top: 20px;" class="btn btn-primary labItemLinks"
+                    onclick="openLabItem('topicDiv')">Тема Мета
+                    Місце розташування лаби №1</button>
+                <p style="margin-top: 40px;" class="structure"><b>СТРУКТУРА ДОКУМЕНТА</b></p><br>
+                <div style="margin-left: 20px;">
+                    <button class="btn btn-primary labItemLinks" onclick="openLabItem('table')">HTML-код
+                        ТАБЛИЦЬ</button><br>
+                    <button class="btn btn-primary labItemLinks" onclick="openLabItem('form')">HTML-код
+                        ФОРМИ</button><br>
+                    <button class="btn btn-primary labItemLinks" onclick="openLabItem('images')">HTML-код
+                        ЗОБРАЖЕННЯ</button><br>
+                </div>
+                <button style="margin-top: 20px;" class="btn btn-primary labItemLinks"
+                    onclick="openLabItem('conclusion')">ВИСНОВОК</button>
+            </div>
+
+
+            <div style="display: none;" class="col-8 labItemContent" id="describeDiv">
+                <p><b>Предметна галузь:</b> Онлайн бібліотека</p>
+                <p>Предметна галузь створювалась для зберігання інформації про книги. Даний застосунок допоможе швидко
+                    обрати потрібну літературу. Користувач зможе переглянути найпопулярніші варіанти певного автора,
+                    жанру, категорії, видавництва. Окрім цього,
+                    буде можливість дізнатися думку інших стосовно обраної книги та подискутувати щодо сюжету.
+                </p>
+                <p style="margin-top: 20px;"><b>Функціонал:</b></p>
+                <p style="text-align: left; margin-left: 100px;">Користувач</p>
+                <ul>
+                    <li class="functional_item">Пошук книги за назвою, автором, жанром, видавництвом;</li>
+                    <li class="functional_item">Переглядати інформацію про книги, а саме назву, автора, видавництво,
+                        короткий опис, рік видання, фото;</li>
+                    <li class="functional_item">Знайти посилання на офіційні книжкові магазини, де можна придбати книгу
+                        за вигідними цінами;</li>
+                    <li class="functional_item">Залишити оцінку;</li>
+                    <li class="functional_item">Написати відгук-коментар;</li>
+                    <li class="functional_item">Вхід в обліковий запис;</li>
+                    <li class="functional_item">Реєстрація нового користувача;</li>
+                </ul>
+                <p style="text-align: left; margin-left: 100px;">Адміністратор</p>
+                <ul>
+                    <li class="functional_item">Те саме, що й користувач</li>
+                    <li class="functional_item">Додавати/редагувати/видаляти інформацію про книги</li>
+                    <li>Редагувати/видаляти коментарі</li>
+                    <li>Доступ до інформації про зареєстрованих користувачів</li>
+                </ul>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="topicDiv">
+                <p class="topic_item"><b>Тема:&nbsp;</b>Структура HTML-документа. Вибір предметної галузі. Робота з
+                    посиланнями, таблицями, зображеннями, формами в HTML-документі.</p>
+                <p class="topic_item"><b>Мета:&nbsp;</b>придбати практичні навички роботи з HTML-документом,
+                    таблицями,формами, зображеннями, посиланнями. Створити шаблон звітного HTML-документом для
+                    відображення результатів роботи всіх лабораторних робіт.
+                </p>
+                <p class="topic_item"><b>Місце розташування 1 лаби:&nbsp;</b><a
+                        href="https://github.com/piks1317/libra">https://github.com/piks1317/libra</a></p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="table">
+                <p><b>HTML-код ТАБЛИЦЬ</b></p>
+                <xmp>
+                    <table
+                        style="align-content: center; text-align: center; margin: 1% auto; font-size: 120%; width: 80%;">
+                        <tr>
+                            <th><img src="https://book-ye.com.ua/upload/resize_cache/iblock/80d/230_355_1/c1c82c9f_1eba_
+11e7_80c5_000c29ae1566_31fc436a_4d1f_11e7_80c7_000c29ae1566.jpg"></th>
+                            <th><img src="https://book-ye.com.ua/upload/resize_cache/iblock/fc2/230_355_1/cfa051db_74e0
+_11e6_80be_000c29ae1566_b779de8b_ae3c_11eb_814a_0050568ef5e6.jpg"></th>
+                            <th><img src="https://book-ye.com.ua/upload/resize_cache/iblock/914/230_355_1/329d4755_9f56
+_11e6_80c0_000c29ae1566_ab9cf233_8b7f_11ea_8132_000c29ae1566.jpg"></th>
+                            <th><img src="https://book-ye.com.ua/upload/resize_cache/iblock/86a/230_355_1/7dcde957_819f
+_11e6_80c0_000c29ae1566_5327238b_2102_11e7_80c5_000c29ae1566.jpg"></th>
+                            <th><img src="https://book-ye.com.ua/upload/resize_cache/iblock/d53/230_355_1/f38b2809_5eb4
+_11ea_812b_000c29ae1566_d9d2c9e1_9bfe_11ea_8136_000c29ae1566.jpg"></th>
+
+                        </tr>
+                        <tr>
+                            <td>Sapiens. Людина розумна. Історія людства від минулого до майбутнього <br> Ювал Ной
+                                Харарі</td>
+                            <td>1984 <br> Джордж Орвелл</td>
+                            <td>Гаррі Поттер і філософський камінь<br> Джоан Ролінґ</td>
+                            <td>Володар перснів. Братство персня<br> Джон Рональд Руел Толкін</td>
+                            <td>Українська мова. Правопис у таблицях, тестові завдання<br> Олександр Авраменко, Оксана
+                                Тищенко</td>
+                        </tr>
+                    </table>
+                </xmp>
+                <p><b>Скриншот таблиці</b></p>
+                <img style="width: 800px;" src="images/Table.png" alt="Table">
+
+                <div style="margin-top: 50px;">
+                    <p class="topic_item"><b>Теорія:</b></p>
+                    <p>Для додавання таблиці на веб-сторінку використовується тег <b>
+                            < table>
+                        </b>. Цей елемент служить контейнером для елементів, що визначають вміст таблиці. Будь-яка
+                        таблиця складається з рядків і осередків, які задаються відповідно за допомогою тегів <b>
+                            < tr>
+                        </b> і <b>
+                            < td>
+                        </b>.</p>
+                </div>
+            </div>
+
+
+
+            <div class="col-8 labItemContent" style="display: none;" id="form">
+                <p><b>HTML-код ФОРМИ</b></p>
+                <xmp>
+                    <form align="center">
+                        <input type="text" name="text" value="Введіть назву, автора, жанр або видавництво ..."
+                            style="width: 60%; padding: 1%; margin: 1% auto;" />
+                        <input type="submit" value="Пошук" style="background-color: 
+DarkGreen; color: white; padding: 1%; margin: 1% auto;" />
+                    </form>
+                </xmp>
+                <p><b>Скриншот форми</b></p>
+                <img style="width: 800px" src="images/Form.png" alt="Form">
+
+                <div style="margin-top: 50px;">
+                    <p class="topic_item"><b>Теорія:</b></p>
+                    <p>Тег <b>
+                            < form>
+                        </b> встановлює форму на веб-сторінці. Форма призначена для обміну даними між користувачем і
+                        сервером. Область застосування форм не обмежена відправкою даних на сервер, за допомогою
+                        клієнтських скриптів можна отримати доступ до
+                        будь-якого елементу форми, змінювати його і застосовувати на власний розсуд.</p>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-8 labItemContent" style="display: none;" id="images">
+                <p><b>HTML-код ЗОБРАЖЕННЯ</b></p>
+                <xmp>
+                    <img src="https://book-ye.com.ua/upload/resize_cache/iblock/80d/230_355_1/c1c82c9f_1eba
+    _11e7_80c5_000c29ae1566_31fc436a_4d1f_11e7_80c7_000c29ae1566.jpg">
+                    <img src="https://book-ye.com.ua/upload/resize_cache/iblock/fc2/230_355_1/cfa051db_74e0
+    _11e6_80be_000c29ae1566_b779de8b_ae3c_11eb_814a_0050568ef5e6.jpg">
+                    <img src="https://book-ye.com.ua/upload/resize_cache/iblock/914/230_355_1/329d4755_9f56
+    _11e6_80c0_000c29ae1566_ab9cf233_8b7f_11ea_8132_000c29ae1566.jpg">
+                    <img src="https://book-ye.com.ua/upload/resize_cache/iblock/86a/230_355_1/7dcde957_819f
+    _11e6_80c0_000c29ae1566_5327238b_2102_11e7_80c5_000c29ae1566.jpg">
+                    <img src="https://book-ye.com.ua/upload/resize_cache/iblock/d53/230_355_1/f38b2809_5eb4
+    _11ea_812b_000c29ae1566_d9d2c9e1_9bfe_11ea_8136_000c29ae1566.jpg">
+                </xmp>
+                <p><b>Скриншот зображень</b></p>
+                <img style="width: 800px;" src="images/Images.png" alt="Images">
+
+                <div style="margin-top: 50px;">
+                    <p><b>Теорія:</b></p>
+                    <p>Тег <b>
+                            < img>
+                        </b> призначений для відображення на веб-сторінці зображень в графічному форматі GIF, JPEG або
+                        PNG. Адреса файлу з картинкою задається через атрибут src.</p>
+                </div>
+            </div>
+
+
+            <div class="col-8 labItemContent" style="display: none;" id="conclusion">
+                <p><b>Висновок:&nbsp;</b>у цій лабораторній ми вивчили та навчились застосовувати основні html-теги.
+                    Обрали пердметну область, також постановили задачі та функціонал, який має виконувати наш сайт.
+                    Написали код основної сторінки на, якій розмістили
+                    таблицю, форму та декілька зображень. </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none; margin-top: 70px; margin-bottom: 50px;" class="container labContent" id="div2">
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary" onclick="openLabItem('photo')">Про нас </button><br>
+                <button style="margin-top: 15px;" class="btn btn-primary" onclick="openLabItem('task')">ПОСТАНОВКА
+                    ЗАДАЧІ лабораторної
+                    №2</button>
+                <button style="margin-top: 15px;" class="btn btn-primary"
+                    onclick="openLabItem('list')">СПИСКИ</button><br>
+                <button style="margin-top: 15px;" class="btn btn-primary"
+                    onclick="openLabItem('identification')">ІНДЕТИФІКАТОРИ</button><br>
+                <button style="margin-top: 15px;" class="btn btn-primary"
+                    onclick="openLabItem('vidstup')">ВІДСТУПИ</button><br>
+                <button style="margin-top: 15px;" class="btn btn-primary" onclick="openLabItem('flying')">ПЛАВАЮЧІ
+                    ЕЛЕМЕНТИ</button><br>
+                <p style="margin-top: 40px;" class="structure"><b>СЕЛЕКТОРИ</b></p><br>
+                <div style="margin-left: 20px;">
+                    <button class="btn btn-primary" onclick="openLabItem('sel1')">Селектори тегу і класу</button><br>
+                    <button class="btn btn-primary" onclick="openLabItem('sel2')">Інші селектори</button><br>
+                    <button class="btn btn-primary" onclick="openLabItem('sel3')">Групування селекторів</button><br>
+                </div>
+                <button style="margin-top: 20px;" class="btn btn-primary"
+                    onclick="openLabItem('висновок')">ВИСНОВОК</button>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="photo">
+                <img height="300px" width="300px" src="photos/bos.jpg" alt="">
+                <img height="300px" width="300px" src="photos/julia.jpg" alt="">
+                <img height="400px" width="300px" src="photos/loh.jpg" alt="">
+                <img height="400px" width="300px" src="photos/kater.jpg" alt="">
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="task">
+                <p class="topic_item"><b>Тема:&nbsp;</b>КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ. ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ
+                    ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ</p>
+                <p class="topic_item"><b>Мета:&nbsp;</b>придбати практичні навички роботи з
+                    селекторами,ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та
+                    внутрішними відступами, плаваючими елементами, оформленням текстових елементів</p>
+                <p class="topic_item"><b>Місце розташування 2-гої ЛР:&nbsp;</b><a
+                        href="https://github.com/piks1317/lab2">https://github.com/piks1317/lab2</a></p>
+                <p class="topic_item"><b>Хід виконання роботи:&nbsp;</b>
+                <ol>
+                    <li>У програмному коді лабораторної работи №2 застосувати селектори тегу і класу на свій розуд.
+                        Вміти пояснити викладачу. Програмний код даного пункту відобразити у звітному HTML-документі
+                    </li>
+                    <li>У програмному коду лабораторної роботи №2 застосувати ідентифікатори. Вміти пояснити викладачу.
+                        Програмний код даного пункту відобразити у звітному HTML-документі.
+                    </li>
+                    <li>На свій розсуд застосувати сусідні, дочірні селектори, селектор атрибута та універсальний
+                        селектор. Програмні коди даного пункту відобразити у звітному HTML-документі.
+                    </li>
+                    <li>За допомогою каскадних таблиць стилів виконати на свій розсуд стильове оформлення текстових
+                        елементів. Показати як оформлюються:
+                        <ul>
+                            <li>списки,</li>
+                            <li>різноманітні властивості кольору і фону,</li>
+                            <li>зовнішні та внутрішні відступи,</li>
+                            <li>плаваючі елементи</li>
+                        </ul>
+                        Програмні коди даного пункту відобразити у звітному HTML-документі.
+                    </li>
+                    <li>У звітному HTML-документі оформити звіт лабораторної роботи №2
+                    </li>
+                </ol>
+                </p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="list">
+                <p><b>HTML-код списків:</b></p>
+                <p><img src="images/списки.png" style="width: 80%"></p>
+                <p><b>CSS-код списків:</b></p>
+                <p><img src="images/списки2.png" style="width: 60%"></p>
+                <p><b>Скріншот списку:</b></p>
+                <p><img src="images/список3.png" style="width: 70%"></p>
+                <p>Кожен список являє собою контейнер <b>ul</b>, який встановлює маркований список, або <b>ol</b>, який
+                    визначає список нумерований. Кожен елемент списку повинен починатися з тега <b>li</b>. За допомогою
+                    селектора тегу <b>ul</b> ми задали
+                    стиль списків, тепер маркери відсутні.</p>
+                <p>Також ми створили як приклад маркований, нумерований, вкладений списки та список визначення.</p>
+                <p><b>HTML код маркованого списку:</b></p>
+                <p><img src="images/mark list.png" style="width: 60%"></p>
+                <p><b>Вигляд:</b></p>
+                <p><img src="images/mk list.png" style="width: 60%;"></p>
+                <p><b>HTML код нумерованого списку:</b></p>
+                <p><img src="images/num list.png" style="width: 60%"></p>
+                <p><b>Вигляд:</b></p>
+                <p><img src="images/number list.png" style="width: 60%;"></p>
+                <p><b>HTML код список визначення:</b></p>
+                <p><img src="images/list viz.png" style="width: 60%"></p>
+                <p><b>Вигляд:</b></p>
+                <p><img src="images/strange list.png" style="width: 60%;"></p>
+                <p><b>HTML код вкладений список:</b></p>
+                <p><img src="images/inner list.png" style="width: 60%"></p>
+                <p><b>Вигляд:</b></p>
+                <p><img src="images/vkl list.png" style="width: 60%;"></p>
+                <p></p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="identification">
+                <p><b>HTML-код з ідентифікатором:</b></p>
+                <p><img src="images/id1.png" style="width: 100%"></p>
+                <p><b>CSS-код ідентифікатора:</b></p>
+                <p><img src="images/id2.png" style="width: 50%"></p>
+                <p><b>Скріншот ідентифікатора:</b></p>
+                <p><img src="images/id3.png" style="width: 50%"></p>
+                <p style="text-align: justify;">Ідентифікатор (id селектор) дозволяє застосувати стиль до певного
+                    елемента на сторінці лише один раз, в якому вказано необхідний ідентифікатор. Визначення селектора
+                    id в CSS коді починається з символу решітки "#", за яким слідує ім'я ідентифікатора.
+                    Ми застосували ідентифікатор "#old-price", що виначає колір та розмір тексту в середині тегу <b> h4
+                    </b>.</p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="vidstup">
+                <p><b>HTML-код:</b></p>
+                <p><img src="images/vids1.png" style="width: 50%"></p>
+                <p><img src="images/vid11.png" style="width: 50%"></p>
+                <p><b>CSS-код:</b></p>
+                <p><img src="images/vids2.png" style="width: 50%"></p>
+                <p><img src="images/vids22.png" style="width: 70%"></p>
+                <p><b>Скріншот:</b></p>
+                <p><img src="images/vids3.png" style="width: 50%"></p>
+                <p><img src="images/vids33.png" style="width: 50%"></p>
+
+                <p style="text-align: justify;">Властивість <b>padding</b> задає внутрішні відступи елемента - відступи
+                    від зовнішньої межі елементу до його вмісту. Ці відступи ще іноді називають полями. Також можна
+                    задавати відступи для різних сторін за допомогою властивостей padding-left,
+                    padding-right, padding-top, padding-bottom. Властивість <b>margin</b> задає зовнішні відступи
+                    елемента - відступи від зовнішньої межі елемента до границь батьківського елементу або до сусідніх
+                    елементів. Можна задавати відступи для
+                    різних сторін за допомогою властивостей margin-left, margin-right, margin-top, margin-bottom.
+                <p style="text-align: justify;"> За допомогою padding-top ми розмістили емблему сайту з самого верху
+                    блоку та використавши margin-top, вирівняли відступи тексту.</p>
+                </p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="flying">
+                <p><b>HTML-код з плаваючими елементами:</b></p>
+                <p><img src="images/fly1.png" style="width: 50%"></p>
+                <p><b>CSS-код з плаваючими елементами:</b></p>
+                <p><img src="images/fly3.png" style="width: 50%"></p>
+                <p><b>Скріншот з плаваючими елементами:</b></p>
+                <p><img src="images/fly2.png" style="width: 100%"></p>
+                <p style="text-align: justify;"><b>Плаваючі елементи</b> - це елементи, які обтікають по контуру іншими
+                    об'єктами веб-сторінки, так і з текстом. Для подібного форматування зазвичай використовується
+                    атрибут <b>align</b>.
+                <p style="text-align: justify;"> Ми за допомогою даного атрибута впорядкували розміщення
+                    зображень та тексту на головній сторінці.</p>
+                </p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="sel1">
+                <p><b>HTML-код з селекторами класу :</b></p>
+                <p><img src="images/клас1 html.png" style="width: 80%;"></p>
+                <p><img src="images/клас2.png" style="width: 80%;"></p>
+                <p><b>HTML-код з селекторами тегу:</b></p>
+                <p><img src="images/тег1.png" style="width: 80%;"></p>
+                <p><img src="images/тег2.png" style="width: 80%;"></p>
+                <p><b>CSS-код з селекторами тегу та класу :</b></p>
+                <p><img src="images/sel1.png" style="width: 80%"></p>
+                <p><img src="images/sel2.png" style="width: 80%"></p>
+                <p><b>Скріншот:</b></p>
+                <p><img src="images/sel11.png" style="width: 80%"></p>
+                <p><img src="images/sel22.png" style="width: 80%"></p>
+                <p style="text-align: justify;">Селектори класу використовуються для визначення стилів для кількох
+                    елементів одного типу, розміщених у різних частинах або на різних сторінках веб-сайту. Селектором
+                    тегу може виступати будь-який тег HTML, для якого визначаються правила
+                    форматування, такі як: колір, фон, розмір і інше. Використавши вище наведені селектори тегів ми
+                    формили нижній колонтитул, а за допомогою селекторів класів карусель зображень.</p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="sel2">
+                <p><b>HTML-код універсального селектора:</b></p>
+                <p><img src="images/універсальний.png" style="width: 100%"></p>
+                <p><b>HTML-код сусіднього селектора:</b></p>
+                <p><img src="images/сусідні html.png" style="width: 80%"></p>
+                <p><b>HTML-код дочірнього селектора:</b></p>
+                <p><img src="images/дочірні.png" style="width: 80%"></p>
+                <p><b>HTML-код селектора атрибута:</b></p>
+                <p><img src="images/атрибута.png" style="width: 80%"></p>
+                <p><b>CSS-код з універсальним, сусіднім, дочірнім селекторами та селектором атрибутів:</b></p>
+                <p><img src="images/sel3.png" style="width: 60%"></p>
+                <p><img src="images/sel4.png" style="width: 60%"></p>
+                <p><img src="images/sel5.png" style="width: 60%"></p>
+                <p><b>Скріншот:</b></p>
+                <p><img src="images/sel6.png" style="width: 80%"></p>
+                <p><img src="images/sel7.png" style="width: 80%"></p>
+                <p><img src="images/sel8.png" style="width: 80%"></p>
+                <p><img src="images/sel9.png" style="width: 80%"></p>
+                <p style="text-align: justify;">
+                <p style="text-align: justify;"><b>Сусідніми</b> називаються елементи веб-сторінки, коли вони йдуть
+                    безпосередньо один за одним в коді документа. Синтаксис: E + F (Опис правил стилю).</p>
+                <p style="text-align: justify;"><b>Селектори нащадків(дочірні)</b> «Нащадками» елемента HTML називаються
+                    будь-які вкладені в нього елементи: це його «діти» (тобто безпосередньо вкладені), діти його дітей,
+                    і так далі, углиб ієрархії тегів. Правильно використовуючи селектори,
+                    можна варіативно застосувати CSS стилі до потрібних елементів, пославшись на їх батьківський
+                    елемент. CSS дозволяє створити селектор для вибору дочірніх елементів будь-якого елементу і змінити
+                    їх властивості, застосувавши CSS стилі.
+                    Для цього перед селектором шуканого елемента треба вставити селектори його «предків», розділивши їх
+                    знаком >.</p>
+                <p style="text-align: justify;"><b>Універсальний селектор,</b> який відповідає будь-якому елементу
+                    веб-сторінки. Для позначення універсального селектора застосовується символ зірочки ( * ). </p>
+                <p style="text-align: justify;"><b>Селектори атрибутів</b> вибирають елементи на основі імені атрибута
+                    або значення атрибута:
+                    [Атрибут] - все елементи, що містять вказаний атрибут, - все елементи, для яких заданий атрибут alt;
+                </p>
+                <p style="text-align: justify;">Застосувавши універсальний селектор, ми задали відступ від границь;
+                    сусідній селектор - змінили колір тексту ціни; дочірній селектор - накреслення тексту; селектор
+                    атрибуту - тип поля вводу.
+                    від зовнішних границь, та розмір шрифту.</p>
+                </p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="sel3">
+                <p><b>HTML-код з гуповими селекторами:</b></p>
+                <p><img src="images/group.png" style="width: 60%;"></p>
+                <p><b>CSS-код з груповим селектором:</b></p>
+                <p><img src="images/групові html.png" style="width: 60%"></p>
+                <p><b>Скріншот:</b></p>
+                <p><img src="images/gp done.png" style="width: 80%"></p>
+                <p style="text-align: justify;">В CSS допускається задати єдиний стиль не тільки одному селектору, а й
+                    групі селекторів. До групи можуть входити як селектори типу, селектори класу, id селектори і так
+                    далі. При перерахуванні будь-яких селекторів необхідно обов'язково розділяти їх комою.</p>
+                <p>За допомогою групування селекторів було задано колір селекторів.</p>
+            </div>
+
+            <div class="col-8 labItemContent" style="display: none;" id="висновок">
+                <p style="text-align: justify;"><b>Висновок:</b> У цій лабораторній роботі ми працювали з каскадними
+                    таблицями стилів (CSS). За допомогою CSS ми встановлюємо певні стилі для кожного об’єкта на сторінці
+                    веб-сайту. Ми ознайомилися з поняттям селекторів та ідентифікаторів, навчилися працювати з
+                    різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими
+                    елементами, оформленням текстових елементів.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="display: none; margin-top: 70px;" class="container labContent" id="div3">
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary labItemLinks" onclick="openLabItem('topicDiv3')">Тема Мета
+                    Місце розташування Звіту, Сайту</button>
+                <button style="margin-top: 15px;" class="btn btn-primary" onclick="openLabItem('view')">Зовнішній вигляд
+                    макету</button><br>
+                <button style="margin-top: 15px;" class="btn btn-primary" onclick="openLabItem('viewCod')">HTML-код
+                    макету</button><br>
+                <div style="margin-left: 20px;">
+                    <br>
+                    <button class="btn btn-primary" onclick="openLabItem('table3')">Розмітка сторінки за допомогою
+                        таблиці</button><br>
+                    <button class="btn btn-primary" onclick="openLabItem('floatBlock')">Розмітка сторінки за допомогою
+                        плаваючих блоків</button><br>
+                </div>
+                <button style="margin-top: 20px;" class="btn btn-primary"
+                    onclick="openLabItem('conclusion3')">ВИСНОВОК</button>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="topicDiv3">
+                <p class="topic_item"><b>Тема:&nbsp;</b>БЛОЧНА ВЕРСТКА HTML-ДОКУМЕНТУ ЗА МАКЕТОМ.</p>
+                <p class="topic_item"><b>Мета:&nbsp;</b>придбати практичні навички роботи верстки сторінок засобами CSS,
+                    верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок
+                </p>
+                <p><b>Хід виконання роботи:</b></p>
+                <p>Під час виконання лабораторної роботи ми придбали практичні навички з макетами різного типу. 
+                    Для цього ми використовували розмітку за допомогою таблиці та плаваючих блоків. Основний
+                     макет нашого сайту був розроблений з використанням плаваючих елементів та являється комбінованим типом.</p>
+                <p class="topic_item"><b>Місце розташування Звіту:&nbsp;</b><a
+                    href="https://github.com/piks1317/report">https://github.com/piks1317/report</a></p>
+                <p class="topic_item"><b>Місце розташування 3-ої ЛР:&nbsp;</b><a
+                        href="https://github.com/piks1317/lab3">https://github.com/piks1317/lab3</a></p>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="view">
+                <p><b><mark>Ми застосовували блочний, комбінований тип макету (адаптивний і гумовий) сайту</mark></b></p>
+                <p><b>Зовнішній вигляд макету сайту:</b></p>
+                <img style="margin-bottom: 50px;" height="800px" width="1000px" src="images/maket.png" alt="maket"
+                    srcset="">
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="viewCod">
+                <p><b>HTML-код та css макету сайту</b></p>
+                <img src="images/codMaketSite.png" alt="" srcset="">
+                <img style="margin-top: 30px" src="images/cssMaketSite.png" alt="" srcset="">
+                <img style="margin-top: 30px;" src="images/cssMaketSite1.png" alt="" srcset="">
+                <img style="margin-top: 30px;" src="images/cssMaketSite3.png" alt="" srcset="">
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="table3">
+                <div id="home1"></div>
+                <a href="#kater1">
+                    <p><b>Макет Каті(8 варіант)</b></p>
+                </a>
+                <a href="#julia1">
+                    <p><b>Макет Юлі(2 варіант)</b></p>
+                </a>
+                <a href="#vova1">
+                    <p><b>Макет Вови(3 варіант)</b></p>
+                </a>
+                <div style="margin-top: 50px;" id="kater1">
+                    <p><b>Зовнішній вигляд макету варіанту 8(Катюха):</b></p>
+                    <img height="500px" width="1000px" src="images/var8table.png" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+                        <table align="center">
+                            <tr class="block1">
+                                <td colspan="2">1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="block2">2</td>
+                                <td class="block5">5</td>
+                            </tr>
+                            <tr>
+                                <td class="block4">4</td>
+                            </tr>
+                            <tr class="block3">
+                                <td colspan="2">3</td>
+                            </tr>
+                        </table>
+
+                        <!-- ------css code------- -->
+                        table {
+                        width: 80%;
+                        font-size: 150%;
+                        text-align: center;
+                        font-weight: bold;
+                        font-family: Arial, Helvetica, sans-serif;
+                        }
+
+                        table, th, td{
+                        border: 3px solid black;
+                        border-collapse: collapse;
+                        }
+
+                        .block1{
+                        background-color: #0c63e4;
+                        color: white;
+                        height: 100px;
+                        }
+
+                        .block2{
+                        background-color: #ffc720;
+                        height: 450px;
+                        width: 200px;
+                        }
+
+                        .block3{
+                        background-color: #0c63e4;
+                        color: white;
+                        height: 100px;
+                        }
+
+                        .block4{
+                        height: 100px;
+                        }
+
+                        .block5{
+                        background-color: #ffc720;
+                        height: 10px;
+                        }
+
+                    </xmp>
+                    <a href="#home1"><p><b>Вернутись назад</b></p></a>
+                </div>
+                <div style="margin-top: 50px;" id="julia1">
+                    <p><b>Зовнішній вигляд макету варіанту 2(Юля):</b></p>
+                    <img height="500px" width="1000px" src="images/var2table.png" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+                        <table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 2%;"></td>
+                                <td class="mainwhitetd"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <table class="centrepart">
+                    
+                            <tr>
+                                <td rowspan="5" style="background-color: blue;"></td>
+                                <td rowspan="5" style="background-color: white; 
+                                width: 50px;"></td>
+                            </tr>
+                            <tr>
+                    
+                                <td colspan="3" class="redtd"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="background-color: white;"></td>
+                            </tr>
+                            <tr>
+                                <td class="whitetd"></td>
+                                <td style="border: 0; width: 10px;"></td>
+                                <td class="bluetd"></td>
+                    
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                    
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="height: 55px;"></td>
+                            </tr>
+                        </table>
+
+                        <!-- ------css code------- -->
+                        table {
+                            width: 100%;
+                            background-color: rgba(255, 255, 0, 0.966);
+                            border: 1px solid black;
+                            border-collapse: separate;
+                        }
+                        
+                        .centrepart {
+                            width: 100%;
+                            background-color: white;
+                            border: 1px solid black;
+                            border-spacing: 0;
+                            padding: 0 3em 0 0;
+                        }
+                        
+                        tr {
+                            height: 30px;
+                        }
+                        
+                        .bluetd {
+                            background-color: blue;
+                            border: 2px solid black;
+                            width: 450px;
+                        }
+                        
+                        .redtd {
+                            background-color: red;
+                            border: 2px solid black;
+                            width: 455px;
+                            height: 55px;
+                        }
+                        
+                        .whitetd {
+                            background-color: white;
+                            border: 2px solid black;
+                            width: 440px;
+                            height: 450px;
+                        }
+                        
+                        .mainwhitetd {
+                            background-color: white;
+                            width: 30%;
+                            border: 3px solid black;
+                            border-collapse: collapse;
+                        }
+
+                    </xmp>
+                    <a href="#home1"><p><b>Вернутись назад</b></p></a>
+                </div>
+                <div id="vova1">
+                    <p><b>Зовнішній вигляд макету варіанту 3(Вова):</b></p>
+                    <img height="500px" width="1000px" src="images/var3table.png" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+                        <table>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 2%;"></td>
+                                <td class="mainwhitetd"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <table class="centrepart">
+                    
+                            <tr>
+                                <td rowspan="5" style="background-color: blue;"></td>
+                                <td rowspan="5" style="background-color: white;
+                                 width: 50px;"></td>
+                            </tr>
+                            <tr>
+                    
+                                <td colspan="3" class="redtd"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="background-color: white;"></td>
+                            </tr>
+                            <tr>
+                                <td class="whitetd"><div style="width: 100%;
+                                 margin-top: 380px; height: 70px; 
+                                background-color: red;"></div></td>
+                                <td style="border: 0; width: 10px;"></td>
+                                <td class="bluetd"></td>
+                    
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                    
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="height: 55px;"></td>
+                            </tr>
+                        </table>
+
+
+
+                        <!-- ------css code------- -->
+                        table {
+                            width: 100%;
+                            background-color: rgba(255, 255, 0, 0.966);
+                            border: 1px solid black;
+                            border-collapse: separate;
+                        }
+                    
+                        .centrepart {
+                            width: 100%;
+                            background-color: white;
+                            border: 1px solid black;
+                            border-spacing: 0;
+                            padding: 0 3em 0 0;
+                        }
+                    
+                        tr {
+                            height: 30px;
+                        }
+                    
+                        .bluetd {
+                            background-color: blue;
+                            border: 2px solid black;
+                            width: 450px;
+                        }
+                    
+                        .redtd {
+                            background-color: red;
+                            border: 2px solid black;
+                            width: 455px;
+                            height: 55px;
+                        }
+                    
+                        .whitetd {
+                            background-color: white;
+                            border: 2px solid black;
+                            width: 440px;
+                            height: 450px;
+                        }
+                    
+                        .mainwhitetd {
+                            background-color: white;
+                            width: 30%;
+                            border: 3px solid black;
+                            border-collapse: collapse;
+                        }
+
+                    </xmp>
+                    <a href="#home1"><p><b>Вернутись назад</b></p></a>
+                </div>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="floatBlock">
+                <div id="home2"></div>
+                <a href="#kater2">
+                    <p><b>Макет Каті(8 варіант)</b></p>
+                </a>
+                <a href="#julia2">
+                    <p><b>Макет Юлі(2 варіант)</b></p>
+                </a>
+                <a href="#vova2">
+                    <p><b>Макет Вови(3 варіант)</b></p>
+                </a>
+                <div style="margin-top: 50px;" id="kater2">
+                    <p><b>Зовнішній вигляд макету варіанту 8(Катюха):</b></p>
+                    <img height="500px" width="1000px" src="images/var8float.png" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+                        
+                        <div class="block1"><p>1</p></div>
+                        <div class="block2"><p>2</p></div>
+                        <div class="block5"><p>5</p></div>
+                        <div class="block4"><p>4</p></div>
+                        <div class="block3"><p>3</p></div>
+                          
+
+                        <!-- ------css code------- -->
+                        body {
+                            width: 80%;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        
+                        .block1 {
+                            background-color: #0c63e4;
+                            color: white;
+                            height: 100px;
+                        }
+                        
+                        .block2 {
+                            background-color: #ffc720;
+                            float: left;
+                            height: 450px;
+                            width: 200px;
+                        }
+                        
+                        .block3 {
+                            background-color: #0c63e4;
+                            color: white;
+                            height: 100px;
+                        }
+                        
+                        .block4 {
+                            height: 345px;
+                        }
+                        
+                        .block5 {
+                            background-color: #ffc720;
+                            height: 100px;
+                        }
+                        
+                        div {
+                            border: 2px solid black;
+                            font-size: 150%;
+                            font-weight: bold;
+                            font-family: Arial, Helvetica, sans-serif;
+                            text-align: center;
+                        
+                        }
+
+                    </xmp>
+                    <a href="#home2"><p><b>Вернутись назад</b> </p></a>
+                </div>
+                <div style="margin-top: 50px;" id="julia2">
+                    <p><b>Зовнішній вигляд макету варіанту 2(Юля):</b></p>
+                    <img height="500px" width="1000px" src="images/var2_2float.jpg" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+                        <div class="startendpart">
+                            <div class="mainwhitepart"></div>
+                        </div>
+                        <div class="bluepart"></div>
+                        <div class="redpart"></div>
+                        <div class="bluepart2"></div>
+                    
+                        <div class="whitepart"></div>
+                        <div class="startendpart"></div>
+
+
+
+
+                        <!-- ------css code------- -->
+                        div {
+                            border: 1px solid black;
+                            font-size: 20px;
+                            height: 80px;
+                        }
+                        
+                        .startendpart {
+                            background-color: yellow;
+                            height: 80px;
+                        }
+                        
+                        .mainwhitepart {
+                            display: inline-block;
+                            background-color: white;
+                            margin: 25px;
+                            height: 20px;
+                            width: 400px;
+                            border: 3px solid black;
+                        }
+                        
+                        .bluepart {
+                            background-color: blue;
+                            float: left;
+                            width: 450px;
+                            height: 592px;
+                        }
+                        
+                        .bluepart2 {
+                            margin-top: 10px;
+                            margin-right: 50px;
+                            background-color: blue;
+                            border: 2px solid black;
+                            float: right;
+                            width: 450px;
+                            height: 480px;
+                        }
+                        
+                        .whitepart {
+                            background-color: white;
+                            width: 450px;
+                            height: 480px;
+                            margin-top: 20px;
+                            margin-left: 520px;
+                            margin-right: 220px;
+                            margin-bottom: 22px;
+                            border: 2px solid black;
+                        }
+                        
+                        .redpart {
+                            background-color: red;
+                            border: 2px solid black;
+                            margin: 10px;
+                            margin-left: 518px;
+                            width: 933px;
+                            height: 55px;
+                        }
+                        
+                        #footer {
+                            background-color: yellow;
+                        }
+                    </xmp>
+                    <a href="#home2"><p><b>Вернутись назад</b> </p></a>
+                </div>
+                <div id="vova2">
+                    <p><b>Зовнішній вигляд макету варіанту 3(Вова):</b></p>
+                    
+                    <img height="500px" width="1000px" src="images/var3float.png" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+                        <div id="header">
+                            <div id="head-field"></div>
+                        </div>
+                        <div id="leftSidebar"></div>
+                            <div style="background-color: red; margin: 10px;
+                             margin-left: 220px;"></div>
+                         <div id="rightSidebar"></div>
+   
+                        <div id="main">
+                            <div style="background-color: red; margin-top:
+                             399px;"></div>
+                        </div>
+                        <div id="footer"></div>
+
+
+
+                        <!-- ------css code------- -->
+                        div {
+                            border: 1px solid black;
+                            font-size: 20px;
+                            height: 80px;
+                        }
+
+                        #header {
+                            background-color: yellow;
+                        }
+
+                        #head-field {
+                            display: inline-block;
+                            margin: 20px;
+                            height: 40px;
+                            width: 300px;
+                            background-color: #fff;
+                        }
+
+                        #leftSidebar {
+                            background-color: blue;
+                            float: left;
+                            width: 200px;
+                            height: 600px;
+                        }
+
+                        #rightSidebar {
+                            margin-right: 10px;
+                            background-color: blue;
+                            float: right;
+                            width: 200px;
+                            height: 480px;
+                        }
+
+                        #main {
+                            background-color: #eee;
+                            height: 480px;
+                            margin-left: 220px;
+                            margin-right: 220px;
+                            margin-bottom: 18px;
+                        }
+
+                        #footer {
+                            background-color: yellow;
+                        }
+
+                    </xmp>
+                    <a href="#home2"><p><b>Вернутись назад</b> </p></a>
+                </div>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="conclusion3">
+                <p><b>Висновок: </b> ми придбали практичні навички верстки сторінок засобами CSS,
+                    розібрались у верстці на основі таблиць та на основі плаваючих елементів, з’ясували переваги та
+                    недоліки типів макетів веб-сторінок.</p>
+
+                    <b>Таблична верстка:</b>
+                    <p>Переваги:</p>
+                    <ul>
+                    <li>Таблиці не перекриваються один з одним при маленьких розширенях.</li>
+                    <li>Легко робити кросбраузерності дизайн.</li>
+                    Набагато простіше блочної верстки.</ul>
+                    Недоліки:
+                    <ul>
+                    <li>Дуже багато зайвого коду, з огляду на нескінченного створення рядків і стовпців.</li>
+                    <li>Далеко не кожен дизайн можна створити за допомогою таблиць.</li></ul>
+                    
+                    <b>Блокова верстка:</b>
+                    <p>Переваги:</p>
+                    <ul>
+                    <li>Значно менше HTML-коду і, як наслідок, зменшення ваги сторінки.</li>
+                    <li>Блоки завантажуються швидше таблиць .</li>
+                    <li>На відміну від таблиць, блоки - універсальний засіб для створення будь-якого дизайну.</li></ul>
+                    Недоліки:
+                    <ul>
+                    <li>Набагато складніше табличній верстки.</li>
+                    <li>Величезні проблеми з кросбраузерністю.</li>
+                    <li>Блоки починають наїжджати (або спадати) один на одного при маленьких дозволах екрану.</li>
+                    
+            </div>
+        </div>
+    </div>
+
+
+    <div style="display: none; margin-top: 70px;" class="container labContent" id="div4">
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary" onclick="openLabItem('describeDiv4')">ПОСТАНОВКА ЗАДАЧІ 
+                Лабораторної роботи 4</button>
+                <p style="margin-top: 40px;" class="structure"><b>Способи функціонального застосування JavaScript</b></p><br>
+                <div style="margin-left: 20px;">
+                    <button class="btn btn-primary" onclick="openLabItem('urlEx')">Схема URL</button><br>
+                    <button class="btn btn-primary" onclick="openLabItem('handlerEx')">Обробник подій</button><br>
+                    <button class="btn btn-primary" onclick="openLabItem('entityEx')">Підстановка(entity)</button><br>
+                    <button class="btn btn-primary" onclick="openLabItem('srciptEx')">Вставка тег(SCRIPT)</button><br>
+                </div>
+                <button style="margin-top: 20px;" class="btn btn-primary"
+                    onclick="openLabItem('arraysItem')">МАСИВИ(4 пункт)</button>
+                <button style="margin-top: 20px;" class="btn btn-primary"
+                    onclick="openLabItem('sixItem')">Виконання(6 пункту)</button><br>
+
+                <button style="margin-top: 20px;" class="btn btn-primary"
+                    onclick="openLabItem('conclusion4')">ВИСНОВОК</button>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="describeDiv4">
+                <p class="topic_item"><b>Тема:&nbsp;</b>ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. 
+                    КЛАСИ,ОБ’ЄКТИ, ФУНКЦІЇ,  В МОВІ JAVASCRIPT. ПОДІЇ ТА ОБРОБКА ПОДІЙ.
+                    ПРОГРАМНА ВЗАЄМОДІЯ З HTML ДОКУМЕНТАМИ НА ОСНОВІ DOM АРІ
+                    </p>
+                <p class="topic_item"><b>Мета:&nbsp;</b>придбати практичні навички роботи маніпулювання 
+                    інформаційним вмістом Web-документа засобами мови Javasсript, використання об’єктів,
+                    масивів, функцій, подій, обробників подій у сценаріях на мові JavaScript
+                </p>
+                <p class="topic_item"><b>Місце розташування 4-ої ЛР:&nbsp;</b><a
+                        href="https://github.com/piks1317/lab4">https://github.com/piks1317/lab4</a></p>
+                <p class="topic_item"><b>Хід виконання роботи:&nbsp;</b>
+                <ol>
+                    <li>У звітному HTML-документі розмістити  тему, мету  лабораторної роботи №4 та посилання
+                         на місце розташування звітного документу та власного Web-застосунку.
+                    </li>
+                    <li>ЗУ власному сайті або на окремій WEB-сторінці, використовуючи функції ,
+                         застосувати  4 способи функціонального застосування JavaScript:
+                        <ul>
+                            <li>гіпертекстове посилання (схема URL)</li>
+                            <li>обробник події (handler)</li>
+                            <li>підстановка(entity)</li>
+                            <li>вставка (тег SCRIPT)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Розмістити результати виконання  та програмний код 2 пункту у звітному HTML-документі,
+                         записавши назви файлів HTML-документів.
+                    </li>
+                    <li>
+                        Використовуючі сценарій на JavaScript, виконати завдання яке приведене у 
+                        Таблиці №1. Кожному студенту виконати своє завдання.
+                        <img width="700px" height="380px" src="images/2-3table_1_tasks.png" alt="">
+                        <img width="700px" height="380px" src="images/8-9table_1_tasks.png" alt="">
+                    </li>
+                    <li>Розмістити результат виконання  та програмний код 4 пункту у звітному HTML-документі.
+                    </li>
+                    <li>
+                        Забезпечити виконання завдання згідно із варіантом (Таблиця №2), сформувати необхідні дані, 
+                        вбудовані у програму, у вигляді масивів, виконати тестування програми.
+                        <img width="700px" height="200px" src="images/2-3table_2_tasks.png" alt="">
+                        <img width="700px" height="200px" src="images/8-9table_2_tasks.png" alt="">
+                    </li>
+                    <li>
+                        Розмістити результат виконання  та програмний код 6 пункту у звітному HTML-документі.
+                    </li>
+                    <li>
+                        У власному сайті на свій розсуд застосувати сценарії на JavaScript. Продемонструвати 
+                        викладачу та відобразити у звітному HTML-документі.
+                    </li>
+                    <li>
+                        У звітному HTML-документі оформити звіт лабораторної роботи №4
+
+                    </li>
+                </ol>
+                </p>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="urlEx">
+                <p><b>Приклад:</b></p>
+                <ul>
+                    <li>Гіпертекстове посилання (схема URL)</li>
+                    <p><a href="JavaScript:alert('Молодець! Гарно справляєшся!');"> Натисни сюди</a></p>
+                </ul>
+                
+                <p><b>HTML-код: </b></p>
+                <xmp style="background-color: aqua;">
+
+    <li>Гіпертекстове посилання (схема URL)</li>
+    <p><a href="JavaScript:alert('Молодець! Гарно справляєшся!');"> Натисни сюди</a></p>
+
+                </xmp>
+
+                <p>Схема URL (Uniform Resource Locator) - це один з основних елементів Web-технології. 
+                    Кожен інформаційний ресурс в Web має свій унікальний URL. URL вказують в атрибуті 
+                    href тега A, в атрибуті src тега IMG, в атрибуті action тега FORM і т.і.</p>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="handlerEx">
+                <p><b>Приклад:</b></p>
+                <ul>
+                    <li>Обробник події (handler)</li>
+                    <br>
+                    <button class="btn btn-info" onclick="document.getElementById('demo').innerHTML=Date()">Дата</button>
+                    <p id="demo"></p>                
+                </ul>
+                
+                <p><b>HTML-код: </b></p>
+                <xmp style="background-color: aqua;">
+
+        <li>Обробник події (handler)</li>
+        <br>
+        <button onclick="document.getElementById('demo').innerHTML=Date()">Дата</button>
+        <p id="demo"></p>
+                
+                </xmp>
+
+                <p>Обробники подій. Такі програми, як обробники подій (handler), вказуються в
+                     атрибутах тегів, з якими ці події пов'язані. Наприклад, при натисканні на
+                      кнопку відбувається подія click:
+                    <xmp><FORM> <INPUT TYPE = button VALUE = "Кнопка" onClick = "window.alert ('Увага');"> </FORM></xmp></p>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="entityEx">
+                <p><b>Приклад:</b></p>
+                <ul>
+                    <li>Підстановка (entity)</li>
+                    <br>
+                    <b>a</b> <input id="a">
+                    <b>b</b> <input id="b">
+                    <button class="btn btn-info" id="concut">concatenate</button>
+                    <p id="result"></p>
+                
+                    <script>
+                        function concatenate(){
+                
+                        const a = document.getElementById('a').value;
+                        const b = document.getElementById('b').value;
+                        const c = a + b;
+                        document.getElementById("result").innerHTML = `c = ${c}`;
+                        console.log(`c = ${c}`);
+                        }
+                        document.getElementById('concut').addEventListener('click', concatenate);
+                
+                    </script>
+                </ul>
+                
+                <p><b>HTML-код: </b></p>
+                <xmp style="background-color: aqua;">
+
+        <li>Підстановка (entity)</li>
+        <br>
+        <b>a</b> <input id="a">
+        <b>b</b> <input id="b">
+        <button id="concut">concatenate</button>
+        <p></p>
+    
+        <script>
+            function concatenate(){
+    
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            const c = a + b;
+            console.log(`c = ${c}`);
+            }
+            document.getElementById('concut').addEventListener('click', concatenate);
+    
+        </script>
+
+                </xmp>
+
+                <p>Підстановка (entity). Це досить потужний інструмент генерації
+                     HTML-сторінки на стороні браузера. Підстановки використовуються в 
+                     якості значень атрибутів HTML-тегів.</p>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="srciptEx">
+                <p><b>Приклад:</b></p>
+                <ul>
+                    <li>Вставка (тег SCRIPT)</li>
+                    <br>
+                    <b>Введіть число:</b> <input id="num">
+                    <button id="ok">OK</button>
+                    <script>
+                        function calculate() {
+                            var number = document.getElementById('num').value;
+                            rz = Math.log(number);
+                            document.getElementById('resultScript').innerHTML = "Натуральний логарифм " + number + " = " + rz;
+                        }
+                
+                        document.getElementById('ok').addEventListener('click', calculate);
+                
+                    </script>
+                    <div id="resultScript"></div>
+                </ul>
+                
+                <p><b>HTML-код: </b></p>
+                <xmp style="background-color: aqua;">
+
+    <li>Вставка (тег SCRIPT)</li>
+    <br>
+    <b>Введіть число:</b> <input id="num">
+    <button id="ok">OK</button>
+    <script>
+        function calculate() {
+            var number = document.getElementById('num').value;
+            rz = Math.log(number);
+            document.getElementById('result').innerHTML = "Натуральний логарифм " + number + " = " + rz;
+        }
+
+        document.getElementById('ok').addEventListener('click', calculate);
+
+    </script>
+    <div id="result"></div>
+
+                </xmp>
+
+                <p>Сценарій на JavaScript включається в документ за допомогою тега &lt;script&gt;<br>
+                    Код сценарію розміщують в теги коментаря html для того, щоб старі браузери, які 
+                    не розуміють JavaScript, не відображали цей код на екрані.
+                    Сам тег &lt;script&gt; включає атрибут language, який визначає мову і набуває таких 
+                    значень: language = "javascript" або type=”text/javascript”.<br>
+                    Елемент script може розташовуватися як всередині секції head, так і всередині body.
+                    Web-документ часто містить кілька сценаріїв JavaScript.
+                </p>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="arraysItem">
+                <div id="homeArray"></div>
+                <a href="#katerArrays">
+                    <p><b>Завдання Каті(8 варіант)</b></p>
+                </a>
+                <a href="#juliaArrays">
+                    <p><b>Завдання Юлі(2 варіант)</b></p>
+                </a>
+                <a href="#vovaArrays">
+                    <p><b>Завдання Вови(3 варіант)</b></p>
+                </a>
+                <div style="margin-top: 50px;" id="katerArrays">
+                    <p><b>Зовнішній вигляд та результат роботи програми варіанту 8(Катюха):</b></p>
+                        <img width="440px" height="180px" src="images/view_8_task.png" alt="" srcset="">
+                        <p><b>Результат роботи</b></p>
+                        <img width="415px" height="350px" src="images/result_8_task.png" alt="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+    <script>
+        let text = "hi everyone! that's the task №8 :D";
+        document.write(text);
+    </script>
+    <br><br>
+    <p><b>number of elements for the first array : </b><input type="number" id="firstN" min="1"
+            style="font-size: 80%; text-align: center; width: 10%"></p>
+    <p><b>number of elements for the second array : </b><input type="number" id="secondN" min="1"
+            style="font-size: 80%; text-align: center; width: 10%"></p>
+    <input type="button" id="run" value="Run" style="font-size: 80%; text-align: center"><br><br>
+    <div id="firstArray"></div>
+    <br>
+    <div id="secondArray"></div>
+    <br>
+    <div id="sortedFirst"></div>
+    <br>
+    <div id="sortedSecond"></div>
+    <br>
+    <div id="min"></div>
+
+
+    <script>
+        function task8() {
+            let n1 = document.getElementById('firstN').value;
+            let n2 = document.getElementById('secondN').value;
+            let array1 = [];
+            let array2 = [];
+
+            for (let i = 0; i < n1; i++) {
+                array1[i] = Math.round((Math.random() * 10))
+            }
+
+            for (let i = 0; i < n2; i++) {
+                array2[i] = Math.round((Math.random() * 10))
+            }
+
+            function bubbleSort(array) {
+                let len = array.length;
+                for (let i = 0; i < len; i++) {
+                    for (let j = 0; j < len - i - 1; j++) {
+                        if (array[j] > array[j + 1]) {
+                            // swap
+                            let temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
+                return array;
+            }
+
+            let sorted1 = bubbleSort(array1);
+            let sorted2 = bubbleSort(array2);
+
+            let min = 0;
+            for (let i = 0; i < sorted1.length; i++) {
+                if (sorted2.includes(sorted1[i])) {
+                    min = sorted1[i];
+                    break;
+                } else {
+                    min = 'do not contains the same numbers'
+                }
+            }
+
+
+            document.getElementById('firstArray').innerHTML = "\nfirst array : " + array1;
+            document.getElementById('secondArray').innerHTML = "second array : " + array2;
+            document.getElementById('sortedFirst').innerHTML = "sorted first array : " + sorted1;
+            document.getElementById('sortedSecond').innerHTML = "sorted second array : " + sorted2;
+            document.getElementById('min').innerHTML = "the smallest identical element in two"+
+            " arrays : " + min;
+
+        }
+
+        document.getElementById('run').addEventListener('click', task8);
+
+    </script>
+
+                    </xmp>
+                    <a href="#homeArray"><p><b>Вернутись назад</b></p></a>
+                </div>
+                <div style="margin-top: 50px;" id="juliaArrays">
+                    <p><b>Зовнішній вигляд та результат роботи програми варіанту 2(Юля):</b></p>
+                    <img width="500px" height="130px" src="images/view_2_task.png" alt="">
+                    <p><b>Результат роботи</b></p>
+                    <img width="500px" height="270px" src="images/result_2_task.png" alt="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+    <b>Введіть кількіcть елементів в масиві:</b> <input id="array">
+    <button id="ok">OK</button>
+    
+    <hr>
+    <div class="rez" id="start"></div>
+    <br>
+    <div class="rez" id="summ"></div>
+    <br>
+    <div class="rez" id="dobut"></div>
+    <br>
+    <div class="rez" id="max"></div>
+    <br>
+    <div class="rez" id="min"></div>
+    
+    
+    <script>
+        function calculate() {
+        var number_el = document.getElementById('array').value;
+        var main_array = [];
+    
+        for (var i = 0; i < number_el; i++) {
+            main_array[i] = Math.round((Math.random() * 30) - 15)
+    
+        }
+    
+        var sum = 0;
+        var length = parseInt(main_array.length / 2);
+        for (var i = 0; i < length; i++) {
+            sum += main_array[2 * i + 1];
+        }
+    
+        var dobutok = 1;
+        for (var i = 0; i <= main_array.length; i++) {
+            if (main_array[i] < 0) {
+            dobutok *= main_array[i];
+            }
+        }
+        if (dobutok == 1) {
+            dobutok = 0;
+        }
+    
+    
+        var max = main_array[0];
+        var max_index = 0;
+        for (var i = 0; i < main_array.length; ++i) {
+            if (main_array[i] >= 0) {
+            if (main_array[i] > max) {
+                max = main_array[i];
+                max_index = i + 1;
+            }
+            }
+        }
+        if (max < 0) {
+            max = 'None'
+            max_index = "-"
+        }
+        vid_max = "Найбільший елемент " + max + " з індексом " + max_index;
+    
+        var min = main_array[0];
+        var min_index = 1;
+        for (var i = 1; i < main_array.length; i++) {
+            if (i % 2 == 0) {
+            if (main_array[i] < min) {
+                min = main_array[i];
+                min_index = i + 1;
+            }
+            }
+        }
+        vid_min = "Найменший елемент серед неапрних індексів " + min + " з індексом " + min_index;
+    
+        document.getElementById('start').innerHTML = main_array;
+        document.getElementById('summ').innerHTML = "Сума елементів з парними індексами " + sum;
+        document.getElementById('dobut').innerHTML = "Добуток від’ємних елементів " + dobutok;
+        document.getElementById('max').innerHTML = vid_max;
+        document.getElementById('min').innerHTML = vid_min;
+        }
+        document.getElementById('ok').addEventListener('click', calculate);
+    </script>
+
+                    </xmp>
+                    <a href="#homeArray"><p><b>Вернутись назад</b></p></a>
+                </div>
+                <div id="vovaArrays">
+                    <p><b>Зовнішній вигляд та результат роботи програми варіанту 3(Вова):</b></p>
+                    <img width="600px" height="130px" src="images/view_3_task.png" alt="" srcset="">
+                    <p><b>Результат роботи</b></p>
+                    <img width="620px" height="180px" src="images/result_3_task.png" alt="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+        <div class="container">
+            <button style="margin-top: 30px;" class="btn btn-info" onclick="func()">
+                Start program</button>
+
+            <div style="margin-top: 50px;">
+                <p style="display: none;" id="array_a"><b>Заданий масив: </b></p>
+                <p id="max"></p>
+                <p  style="display: none;" id="array_b"><b>Вихідний масив: </b></p>
+            </div>
+            
+        </div>
+        
+
+        <script>
+            function func() {
+                var length = prompt("Enter array length : ");
+
+                var array_a = [];
+
+                for (i = 0; i < length; i++) {
+                    array_a.push(Math.round(Math.random() * 100));
+                }
+
+                var max = 0;
+
+                for (i = 0; i < array_a.length; i++) {
+                    if (array_a[i] > max) {
+                        max = array_a[i];
+                    }
+                }
+
+                function printArray(array, blockName) {
+                    document.getElementById(blockName).style.display = "block"
+                    var log = [];
+
+                    for (i = 0; i < array.length; i++) {
+                        if (i < array.length - 1) {
+                            log += array[i] + ', ';
+                        } else { log += array[i] }
+
+                    }
+                    document.getElementById(blockName).innerHTML += log;
+                }
+
+                printArray(array_a, 'array_a');
+
+                document.getElementById('max').innerHTML += "<b>Max element : </b>" + max;   
+
+                var array_b = [];
+
+                for (i = 0; i < length; i++) {
+                    array_b.push(array_a[i] * max);
+                }
+
+                printArray(array_b, 'array_b');
+            }
+
+            
+        </script>
+                    </xmp>
+                    <a href="#homeArray"><p><b>Вернутись назад</b></p></a>
+                </div>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="sixItem">
+                <div id="homeTask6"></div>
+                <a href="#katerTask6">
+                    <p><b>Завдання Каті(8 варіант)</b></p>
+                </a>
+                <a href="#juliaTask6">
+                    <p><b>Завдання Юлі(2 варіант)</b></p>
+                </a>
+                <a href="#vovaTask6">
+                    <p><b>Завдання Вови(3 варіант)</b></p>
+                </a>
+                <div style="margin-top: 50px;" id="katerTask6">
+                    <p><b>Зовнішній вигляд варіанту 8(Катюха):</b></p>
+                    <img  src="images/alarm_view.png" alt="" srcset="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="nowTime" class="form-label">Now Time</label>
+                    <input type="text" class="form-control" id="nowTime">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Time</label>
+                    <input step="2" type="time" class="form-control" id="time">
+                </div>
+                <button type="button" onclick="func()" class="btn btn-primary">Add alarm</button>
+            </div>
+            <div class="col-4" id="alarms">
+                <p><b>Заведені будильники: </b></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var alarm;
+        var timeEnd;
+        function func() {
+            var date = document.getElementById("date").value;
+            timeEnd = document.getElementById('time').value;
+            let time = Math.abs(new Date() - new Date(date + " " + timeEnd))
+            
+            alarm = setTimeout(function(){ 
+                alert("Вставай, на роботу пора!"); 
+                document.getElementById(timeEnd).innerHTML = ""
+            }, time);
+
+            document.getElementById('alarms').innerHTML += '<p id="'+timeEnd+
+            '"><b>Alarm: </b> Date: '+date+' Time: <mark>'+ timeEnd 
+                +'</mark><button onclick="disable()">Disable</button></p>'
+
+        }
+
+        function disable(){
+            clearTimeout(alarm);
+            document.getElementById(timeEnd).innerHTML = ""
+        }
+
+
+        function showtime() {
+            var now = new Date()
+            var hours = now.getHours()
+            var minutes = now.getMinutes()
+            var seconds = now.getSeconds()
+            var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+            timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+            timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+            timeValue += (hours >= 12) ? " PM" : " AM"
+            document.getElementById('nowTime').value = timeValue
+            timerID = setTimeout("showtime()", 1000)
+            timerRunning = true
+            
+        }
+    </script>
+
+                    </xmp>
+                    <a href="#homeTask6"><p><b>Вернутись назад</b></p></a>
+                </div>
+                <div style="margin-top: 50px;" id="juliaTask6">
+                    <p><b>Зовнішній вигляд програми варіанту 2(Юля):</b></p>
+                    <img src="images/menu_view.png" alt="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+                        <!-- script.js -->
+   
+            function func() {
+
+                let array = ['Item3'];
+                var inner = array.map(el => '<li  class = "more">' + el + '<ul  id="' + 
+                    el + '"></ul></li>').join('');
+                document.getElementById('menu').innerHTML += inner;
+
+                let arrayOfPages = ['Page1', 'Page2'];
+                var inner = arrayOfPages.map(el => '<li><a href="' + el + '.html">' + 
+                    el + '</a></li>').join('');
+                array.map(el => document.getElementById(el).innerHTML += inner);
+                (function () {
+                    var elm = document.querySelectorAll('.more');
+
+                    for (var i = 0; i < elm.length; i++) {
+                        elm[i].addEventListener('click', function () {
+                            this.classList.toggle('open');
+                        }, false);
+                    }
+                })();
+
+
+                <!-- Main page -->
+                <ul class="nav" id="menu">
+                    <li><a href="Item1.html">Item1</a></li>
+                    <li>Item2</li>
+                </ul>
+
+                <!-- page 1 -->
+                <ul class="nav" id="menu">
+                    <li><a href="Item1.html">Item1</a></li>
+                    <li>Item2</li>
+                </ul><b>Page 1</b>
+
+                <!-- page 2 -->
+                <ul class="nav" id="menu">
+                    <li><a href="Item1.html">Item1</a></li>
+                    <li>Item2</li>
+                </ul><b>Hello!!!</b>
+
+                <!-- item 1 -->
+                <ul class="nav" id="menu">
+                    <li><a href="Item1.html"></a>Item1</li>
+                    <li>Item2</li>
+                </ul><b>Page for Item1</b>
+                        
+
+                    </xmp>
+                    <a href="#homeTask6"><p><b>Вернутись назад</b></p></a>
+                </div>
+
+                <div style="margin-top: 50px;" id="vovaTask6">
+                    <p><b>Зовнішній вигляд програми варіанту 3(Вова):</b></p>
+                    <img src="images/calculator_view.png" alt="">
+                    <p style="margin-top: 50px;"><b>HTML-код:</b></p>
+                    <xmp style="background-color: aqua;">
+
+    <div style="margin-top: 100px;" class="container">  
+        <h3>Такий крутий калькулятор шо мови нема</h3>
+        
+        <div class="row">
+            <div>
+            <input id='expr' class='form-control'/>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <button onclick="func1()" class='btn btn-info'>1</button>
+                <button onclick="func2()" class='btn btn-info'>2</button>
+                <button onclick="func3()" class='btn btn-info'>3</button>
+                <button onclick="funcClear()" class='btn btn-danger'>C</button>
+                <button onclick="funcPlus()" class='btn btn-danger'>+</button>
+                <button onclick="funcMinus()" class='btn btn-danger'>-</button>
+            </div>
+            <div>
+                <button onclick="func4()" class='btn btn-info'>4</button>
+                <button onclick="func5()" class='btn btn-info'>5</button>
+                <button onclick="func6()" class='btn btn-info'>6</button>
+                <button onclick="funcMult()" class='btn btn-danger'>*</button>
+                <button onclick="funcDiv()" class='btn btn-danger'>/</button>
+                <button onclick="funcDeg()" class='btn btn-danger'>^</button>
+            </div>
+            <div>
+                <button onclick="func7()" class='btn btn-info'>7</button>
+                <button onclick="func8()" class='btn btn-info'>8</button>
+                <button onclick="func9()" class='btn btn-info'>9</button>
+                <button onclick="funcOst()" class='btn btn-danger'>%</button>
+                <button onclick="funcSqrt()" class='btn btn-danger'>√</button>  
+            </div>
+            <div>
+                <button onclick="func0()" class='btn btn-info'>0</button>
+                <button onclick="funcDot()" class='btn btn-warning'>.</button>
+                <button onclick="funcDel()" class='btn btn-warning'><</button>
+                <button style="margin-left: 105px;" onclick="funcCalc()" 
+                class='btn btn-success'>=</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function func1(){document.getElementById('expr').value += '1';}
+        function func2(){document.getElementById('expr').value += '2';}
+        function func3(){document.getElementById('expr').value += '3';}
+        function func4(){document.getElementById('expr').value += '4';}
+        function func5(){document.getElementById('expr').value += '5';}
+        function func6(){document.getElementById('expr').value += '6';}
+        function func7(){document.getElementById('expr').value += '7';}
+        function func8(){document.getElementById('expr').value += '8';}
+        function func9(){document.getElementById('expr').value += '9';}
+        function func0(){document.getElementById('expr').value += '0';}
+        function funcDot(){document.getElementById('expr').value +=  '.';}
+        function funcDel(){document.getElementById('expr').value =
+         document.getElementById('expr').value.slice(0,-1);}
+        function funcClear(){document.getElementById('expr').value = '';}
+        function funcPlus(){document.getElementById('expr').value += '+';}
+        function funcMinus(){document.getElementById('expr').value += '-';}
+        function funcDiv(){document.getElementById('expr').value += '/';}
+        function funcMult(){document.getElementById('expr').value += '*';}
+        function funcOst(){document.getElementById('expr').value += '%';}
+        function funcDeg(){document.getElementById('expr').value += '**';}
+        function funcSqrt(){document.getElementById('expr').value = 'Math.sqrt('
+        +document.getElementById('expr').value+')'}
+        function funcCalc(){document.getElementById('expr').value =
+         eval(document.getElementById('expr').value);}  
+    </script>
+
+                    </xmp>
+                    <a href="#homeTask6"><p><b>Вернутись назад</b></p></a>
+                </div>
+            </div>
+            <div class="col-8 labItemContent" style="display: none;" id="conclusion4">
+                <p><b>Висновок: </b> ми придбали практичні навички роботи маніпулювання інформаційним 
+                    вмістом Web-документа засобами мови Javasсript, використання об’єктів, масивів,
+                     функцій, подій, обробників подій у сценаріях на мові JavaScript</p>
+
+                    <p>А також застосували  4 способи функціонального застосування JavaScript:</p>
+                    <ul>
+                        <li>гіпертекстове посилання (схема URL);</li>
+                        <li>обробник події (handler);</li>
+                        <li>підстановка (entity);</li>
+                        <li>вставка (тег SCRIPT).</li>
+                    </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

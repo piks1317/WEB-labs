@@ -1,0 +1,106 @@
+<html>
+<style>
+  body {
+    background-color: lightblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 100px;
+    font-size: 140%;
+    color: midnightblue;
+    font-style: oblique;
+  }
+
+  .rez {
+    color: purple;
+    font-size: 120%;
+  }
+</style>
+
+<head>
+  <title>Task 1</title>
+</head>
+
+<body>
+
+  <b>Введіть кількіcть елементів в масиві:</b> <input id="array">
+  <button id="ok">OK</button>
+
+  <hr>
+  <div class="rez" id="start"></div>
+  <br>
+  <div class="rez" id="summ"></div>
+  <br>
+  <div class="rez" id="dobut"></div>
+  <br>
+  <div class="rez" id="max"></div>
+  <br>
+  <div class="rez" id="min"></div>
+
+
+  <script>
+    function calculate() {
+      var number_el = document.getElementById('array').value;
+      var main_array = [];
+
+      for (var i = 0; i < number_el; i++) {
+        main_array[i] = Math.round((Math.random() * 30) - 15)
+
+      }
+
+      var sum = 0;
+      var length = parseInt(main_array.length / 2);
+      for (var i = 0; i < length; i++) {
+        sum += main_array[2 * i + 1];
+      }
+
+      var dobutok = 1;
+      for (var i = 0; i <= main_array.length; i++) {
+        if (main_array[i] < 0) {
+          dobutok *= main_array[i];
+        }
+      }
+      if (dobutok == 1) {
+        dobutok = 0;
+      }
+
+
+      var max = main_array[0];
+      var max_index = 0;
+      for (var i = 0; i < main_array.length; ++i) {
+        if (main_array[i] >= 0) {
+          if (main_array[i] > max) {
+            max = main_array[i];
+            max_index = i + 1;
+          }
+        }
+      }
+      if (max < 0) {
+        max = 'None'
+        max_index = "-"
+      }
+      vid_max = "Найбільший елемент " + max + " з індексом " + max_index;
+
+      var min = main_array[0];
+      var min_index = 1;
+      for (var i = 1; i < main_array.length; i++) {
+        if (i % 2 == 0) {
+          if (main_array[i] < min) {
+            min = main_array[i];
+            min_index = i + 1;
+          }
+        }
+      }
+      vid_min = "Найменший елемент серед неапрних індексів " + min + " з індексом " + min_index;
+
+      document.getElementById('start').innerHTML = main_array;
+      document.getElementById('summ').innerHTML = "Сума елементів з парними індексами " + sum;
+      document.getElementById('dobut').innerHTML = "Добуток від’ємних елементів " + dobutok;
+      document.getElementById('max').innerHTML = vid_max;
+      document.getElementById('min').innerHTML = vid_min;
+    }
+    document.getElementById('ok').addEventListener('click', calculate);
+  </script>
+
+</body>
+
+</html>
