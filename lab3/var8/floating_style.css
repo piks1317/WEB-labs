@@ -1,0 +1,42 @@
+body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block1 {
+    background-color: #0c63e4;
+    color: white;
+    height: 100px;
+}
+
+.block2 {
+    background-color: #ffc720;
+    float: left;
+    height: 450px;
+    width: 200px;
+}
+
+.block3 {
+    background-color: #0c63e4;
+    color: white;
+    height: 100px;
+}
+
+.block4 {
+    height: 345px;
+}
+
+.block5 {
+    background-color: #ffc720;
+    height: 100px;
+}
+
+div {
+    border: 2px solid black;
+    font-size: 150%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
