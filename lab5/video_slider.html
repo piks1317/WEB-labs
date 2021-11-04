@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>
+    <script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>
+
+    <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+
+    <script type='text/javascript' src='unitegallery/themes/slider/ug-theme-slider.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <body style="background-color: #ccfcfc;">
+
+        <div class="container">
+
+            <h3 class="display-4" style="text-align: center;">зробив слайдер корисних відеоматеріалів, зацініть</h3>
+
+            <div id="gallery" style="margin-left: auto; margin-right: auto; display:none;">
+
+                <img alt="Youtube Video" data-type="youtube" data-videoid="OaZy8M5-ym4"
+                    data-description="You can include youtube videos easily!">
+
+                <img alt="Youtube Video" data-type="youtube" data-videoid="aWC6ZC10Fb0"
+                    data-description="You can include youtube videos easily!">
+                <img alt="Youtube Video" data-type="youtube" data-videoid="PS8lK1fd2co"
+                    data-description="You can include youtube videos easily!">
+
+
+
+            </div>
+
+        </div>
+
+
+        <script type="text/javascript">
+
+            jQuery(document).ready(function () {
+
+                jQuery("#gallery").unitegallery();
+
+            });
+
+        </script>
+    </body>
+
+</html>
