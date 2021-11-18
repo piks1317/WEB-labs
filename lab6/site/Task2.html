@@ -1,0 +1,101 @@
+<!Doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task2</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion();
+        } );
+        $( function() {
+            $( "input" ).checkboxradio();
+        } );
+
+        $(function() {
+
+            $('#dialog').dialog({
+                autoOpen: false
+            });
+
+            $('button').button().click(function(e) {
+                $('#dialog').dialog("open")
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<h1>Accordion</h1>
+<h2>Ольга Кобилянська: біографія</h2>
+<div id="accordion">
+    <h3>Ранні роки </h3>
+    <div>
+        <p>
+            Ольга Юліанівна Кобилянська народилася 27 листопада 1863 року у містечку Гура-Гумора в Південній Буковині у багатодітній сім’ї службовця.
+            У 1873 -1877 рр. вчилася в початковій чотирикласній німецькій школі. Не маючи можливості вчитися далі, подальшу освічу вона здобувала самотужки.
+            З 1889 до 1891 жила в с. Димка. Пізніше вона разом з родиною переїхала на постійне життя до Чернівців, брала активну участь у жіночому русі.
+            У 1894 році письменниця стала однією з фундаторок «Товариства руських жінок на Буковині».
+        </p>
+    </div>
+    <h3>Феміністичні теми</h3>
+    <div>
+        <p>
+            Важливою подією в житі і О. Кобилянської було знайомство із Софією Окуневською, однією з найосвіченіших жінок тодішньої Галичини.
+            Саме вона переконала письменницю писати українською мовою і познайомила її з українською письменницею Наталею Кобринською,
+            яка пропагувала жіночий рух у Галичині. Саме, Софія Окуневська та Наталя Кобринська залучили Кобилянську до феміністичного руху.
+            Захопившись феміністичними ідеями, О.Кобилянськавперше в українській літературі порушує тему емансипації жінки.
+
+        </p>
+    </div>
+    <h3>Творчість</h3>
+    <div>
+
+        <ul>
+            <li>Повість «Людина»</li>
+            <li>Оповідання й повість «Він і Вона» (1895), “Царівна” (1896), “Що я любив» (1896 р.)</li>
+            <li>Лірично-романтична повість “В неділю рано зілля копала” (1909),</li>
+            та інші...
+        </ul>
+    </div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<h1>Checkboxradio</h1>
+    <legend> Динамічні елементи: </legend>
+    <p>
+    <label for="radio-1">Accordion</label>
+    <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-2">Tabs</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-3">Tooltip</label>
+    <input type="radio" name="radio-1" id="radio-3"></p>
+<br>
+<br>
+<hr>
+<br>
+<h1>Dialog</h1>
+<div id="dialog" title="Увага!!!">
+    <p>Любіть Україну, як сонце, любіть,
+        як вітер, і трави, і води…
+        В годину щасливу і в радості мить,
+        любіть у годину негоди.</p>
+</div>
+<button>Показати діалогове вікно</button>
+
+</body>
+<style>
+    h1{
+        align: center;
+    }
+    body{
+      background: antiquewhite;
+    }
+</style>
+</html>
