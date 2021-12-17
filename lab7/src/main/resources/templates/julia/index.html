@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: #ccfcfc;">
+<div class="container">
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Form to create new Producer</b></p>
+        <form th:action="@{/julia/newProducer}" th:method="POST">
+
+            <label class="form-label" for="name">Name: </label>
+            <input class="form-control" type="text" name="name" id="name">
+            <label class="form-label" for="address">Address: </label>
+            <input class="form-control" type="text" name="address" id="address">
+            <label class="form-label" for="phone">Phone: </label>
+            <input class="form-control" type="text" name="phone" id="phone">
+
+            <input class="btn btn-warning" type="submit" value="Crate Producer">
+        </form>
+    </div>
+
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Form to create new Pharmacy</b></p>
+        <form th:action="@{/julia/newPharmacy}" th:method="POST">
+
+            <label class="form-label" for="nameph">Name: </label>
+            <input class="form-control" type="text" name="name" id="nameph">
+            <label class="form-label" for="addressph">Address: </label>
+            <input class="form-control" type="text" name="address" id="addressph">
+
+            <input class="btn btn-warning" type="submit" value="Crate Pharmacy">
+        </form>
+    </div>
+
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Form to create new Medecine</b></p>
+        <form th:action="@{/julia/new}" th:method="POST">
+            <label class="form-label" for="namem">Name: </label>
+            <input class="form-control" type="text" name="name" id="namem">
+
+            <label class="form-label" for="description">Description: </label>
+            <input class="form-control" type="text" name="description" id="description">
+
+            <div th:if="${producers != null}">
+                <select class="form-select" name="producer">
+                    <div th:each="producer : ${producers}">
+                        <option th:value="${producer.getId()}" th:text="${producer.getName()}">Producer</option>
+                    </div>
+                </select>
+            </div>
+
+            <div th:if="${pharmacies != null}">
+                <select class="form-select" name="pharmacy">
+                    <div th:each="pharmacy : ${pharmacies}">
+                        <option th:value="${pharmacy.getId()}" th:text="${pharmacy.getName()}">Pharmacy</option>
+                    </div>
+                </select>
+            </div>
+
+            <input class="btn btn-warning" type="submit" value="Crate">
+        </form>
+    </div>
+
+    <div class="col-4">
+        <form th:action="@{/julia/search}" th:method="GET">
+
+            <label class="form-label" for="srch">Put Medecine Name: </label>
+            <input class="form-control" type="text" name="srch" id="srch">
+
+            <input class="btn btn-warning" type="submit" value="Search">
+        </form>
+    </div>
+
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Medcines:</b></p>
+        <div th:each="medecine : ${medecines}">
+            <a th:href="@{/julia/{id}(id=${medecine.getId()})}" th:text="${medecine.getName()}">Medecine</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

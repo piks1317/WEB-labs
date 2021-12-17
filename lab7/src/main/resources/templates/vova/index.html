@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ComputerEquipment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: #ccfcfc;">
+<div class="container">
+
+    <div class="col-4">
+            <p><b>Form to create new Kind</b></p>
+        <form th:action="@{/vova/newKind}" th:method="POST">
+
+            <label class="form-label" for="kind">Kind: </label>
+            <input class="form-control" type="text" name="kind" id="kind">
+
+            <input class="btn btn-warning" type="submit" value="Crate kind">
+        </form>
+    </div>
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Form to create new Type</b></p>
+        <form th:action="@{/vova/newType}" th:method="POST">
+            <label class="form-label" for="type">Type: </label>
+            <input class="form-control" type="text" name="type" id="type">
+
+            <input class="btn btn-warning" type="submit" value="Crate type">
+        </form>
+    </div>
+
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Form to create new Computer Equipment</b></p>
+        <form th:action="@{/vova/new}" th:method="POST">
+            <label class="form-label" for="name">Name: </label>
+            <input class="form-control" type="text" name="name" id="name">
+            <div class="col-6">
+                <div th:if="${kinds != null}">
+                    <select class="form-select" name="kind">
+                        <div th:each="kind : ${kinds}">
+                            <option th:value="${kind.getId()}" th:text="${kind.getKind()}">Kind</option>
+                        </div>
+                    </select>
+                </div>
+
+                <div th:if="${types != null}">
+                    <select class="form-select" name="type">
+                        <div th:each="type : ${types}">
+                            <option th:value="${type.getId()}" th:text="${type.getType()}">Type</option>
+                        </div>
+                    </select>
+                </div>
+            </div>
+
+
+            <input class="btn btn-warning" type="submit" value="Crate">
+        </form>
+    </div>
+
+    <div class="col-4">
+        <form th:action="@{/vova/search}" th:method="GET">
+
+            <label class="form-label" for="srch">Put Equipment Name: </label>
+            <input class="form-control" type="text" name="srch" id="srch">
+
+            <input class="btn btn-warning" type="submit" value="Search">
+        </form>
+    </div>
+
+
+    <div style="margin-top: 20px;" class="col-4">
+        <p><b>Equipments List: </b></p>
+        <div th:each="equipment : ${equipments}">
+            <a th:href="@{/vova/{id}(id=${equipment.getId()})}" th:text="${equipment.getName()}">Equipment</a>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
