@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Update PubHouse</title>
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+</head>
+<body style="background-color: rgb(252, 251, 210);">
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="site-logo">Libra</div>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" th:href="@{/admin}">[[#{nav.back}]]</a>
+                    </li>
+                </ul>
+                <div sec:authorize="isAuthenticated()">
+                    <form th:action="@{/logout}" th:method="POST">
+                        <p th:text="${#authentication.name}"></p>
+                        <input class="btn btn-outline-dark" type="submit" th:value="#{nav.logout}" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+    <div class="container">
+        <div class="col-4">
+            <p><b>[[#{pubhouse.update.form}]]</b></p>
+            <form th:action="@{/admin/updatePubHouse}" th:method="patch" th:object="${pubhouse}">
+                <label class="form-label" for="name">[[#{pubhouse.name}]]:</label>
+                <input class="form-control" id="name" th:field="*{name}"  type="text">
+
+                <label class="form-label" for="contact">[[#{pubhouse.contact}]]:</label>
+                <input class="form-control" id="contact" th:field="*{contact}" type="text">
+
+                <label class="form-label" for="site">[[#{pubhouse.site}]]:</label>
+                <input class="form-control" id="site" th:field="*{site}" type="text">
+                <input type="hidden" name="id" th:value="${pubhouse.id}">
+
+                <input class="btn btn-warning" type="submit" th:value="#{pubhouse.update.button}">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
