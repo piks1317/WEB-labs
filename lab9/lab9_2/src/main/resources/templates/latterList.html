@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div th:each="latter : ${latters}">
+        <b><p th:text="${latter.sender.login}"></p></b>
+        <p th:text="${latter.text}"></p>
+        <form th:action="@{/api/delete/{id}(id=${latter.id})}" th:method="delete">
+            <input type="submit" value="delete"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

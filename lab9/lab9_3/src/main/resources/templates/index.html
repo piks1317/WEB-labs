@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background: #6cf3f3">
+<div class="container">
+    <div class="col-4">
+        <form th:method="POST" th:action="@{/api/registrate}" th:object="${person}">
+            <label class="form-label" for="name">Name: </label>
+            <input class="form-control" type="text" name="name" th:field="*{name}" id="name"/>
+            <span id="nameMsg"></span>
+
+            <br/>
+            <label class="form-label" for="age">Age: </label>
+            <input class="form-control" type="text" name="age" th:field="*{age}" id="age">
+            <span id="ageMsg"></span>
+
+            <br/>
+            <label class="form-label" for="country">Country: </label>
+            <input class="form-control" type="text" name="country" onkeyup="showCountryHint(this.value)" th:field="*{country}" id="country"><br>
+            <span id="search_country"></span>
+
+            <br/>
+            <label class="form-label" for="city">City: </label>
+            <input class="form-control" type="text" name="city" onkeyup="showCityHint(this.value)" th:field="*{city}" id="city"><br>
+            <span id="search_city"></span>
+
+            <br/>
+            <label class="form-label" for="email">Email: </label>
+            <input class="form-control" type="text" name="email" th:field="*{email}" id="email">
+            <span id="emailMsg"></span>
+
+            <br/>
+            <label class="form-label" for="password">Password: </label>
+            <input class="form-control" type="password" name="password" th:field="*{password}" id="password">
+            <span id="pswrdMsg"></span>
+
+            <br/>
+            <input class="btn btn-info" type="submit" id="create" value="Registrate">
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+    function showCityHint(str){
+        if ($("#city").val()!=""){
+            var search = $("#city").val();
+            $.ajax({
+                url : window.location + "/searchCity",
+                data : "string=" + search,
+                success : function (result) {
+                    $("#search_city").html("<b>Possible Cities: </b>"+result).css("color", "green");
+                }
+            })
+        }else {
+            $("#search_city").html("");
+        }
+    }
+    function showCountryHint(str){
+        if ($("#country").val()!=""){
+            var search = $("#country").val();
+            $.ajax({
+                url : window.location + "/searchCountry",
+                data : "string=" + search,
+                success : function (result) {
+                    $("#search_country").html("<b>Possible Countries: </b>"+result).css("color", "green");
+                }
+            })
+        }else {
+            $("#search_country").html("");
+        }
+    }
+</script>
+
+<script>
+    $("#password").blur(function () {
+        var enteredPswrd = $("#password").val();
+        $.ajax({
+            url : window.location + "/validatePassword",
+            data : "password=" + enteredPswrd,
+            success : function (result) {
+                if (result == "Password Success"){
+                    $("#pswrdMsg").html("Password Success").css("color", "green");
+                    $("#create").prop("disabled", false);
+                } else {
+                    $("#pswrdMsg").html(result).css("color", "red");
+                    $("#create").prop("disabled", true);
+                }
+            }
+        })
+    })
+    $("#age").blur(function () {
+        var enteredAge = $("#age").val();
+        $.ajax({
+            url : window.location + "/validateAge",
+            data : "age=" + enteredAge,
+            success : function (result) {
+                if (result == "Success"){
+                    $("#ageMsg").html("");
+                } else {
+                    $("#ageMsg").html(result).css("color", "red");
+                    $("#age").focus();
+                }
+            }
+        })
+    })
+    $("#email").blur(function () {
+        var enteredEmail = $("#email").val();
+        $.ajax({
+            url : window.location + "/validateEmail",
+            data : "email=" + enteredEmail,
+            success : function (result) {
+                if (result == "Duplicate"){
+                    $("#emailMsg").html("Email already registered").css("color", "red");
+                    $("#create").prop("disabled", true);
+                } else {
+                    $("#emailMsg").html("");
+                    $("#create").prop("disabled", false);
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

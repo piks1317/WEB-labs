@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<p>Privet</p>
+<form th:action="@{/logout}" th:method="POST">
+    <p th:text="${#authentication.name}"></p>
+    <input type="submit" value="Logout" />
+</form>
+
+    <label for="recipient">Send To:</label>
+    <input type="text" id="recipient" name="recipient">
+
+    <br>
+    <label for="text">Latter:</label>
+    <textarea type="text" id="text" name="text"></textarea>
+
+    <input type="hidden" name="sender" id="sender" th:value="${#authentication.name}">
+    <br>
+    <input type="submit" value="Send" onclick="sendLatter()"/>
+    <span id="message"></span>
+
+<form th:action="@{/api/showIncomming}" th:method="post">
+    <input type="hidden" name="sender" th:value="${#authentication.name}">
+    <input type="submit" value="Incomming"/>
+</form>
+<form th:action="@{/api/showOutcomming}" th:method="post">
+    <input type="hidden" name="sender" th:value="${#authentication.name}">
+    <input type="submit" value="Outcomming"/>
+</form>
+
+<script>
+    function sendLatter() {
+        $.ajax({
+            url :  "/api/sendLatter",
+            data : {
+                recipient : $("#recipient").val(),
+                text : $("#text").val(),
+                sender : $("#sender").val()
+            },
+            success : function () {
+                $("#message").html("Message sent successfully").css("color", "green");
+                $("#recipient").val('');
+                $("#text").val('');
+            }
+        })
+    }
+</script>
+</body>
+</html>
